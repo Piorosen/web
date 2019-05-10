@@ -1,0 +1,23 @@
+
+body {
+    background: #3333aa;
+}
+
+.form {
+    text-align: center;
+    background: black;
+}
+
+#id {
+    width: 200px;
+    display: block;
+}
+
+#password {
+    width: 200px;
+    display: block;
+}
+
+#login {
+    display: inline;
+}
