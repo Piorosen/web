@@ -35,17 +35,10 @@ body {
     float: left;
 }
 
-.head .list {
-    width: 35%;
-    height: 200px;
-    background-color: aqua;
-    float: left;
-}
-
 .head .logotitle p {
     display: table-cell;
     vertical-align: middle;
-    
+    color: #dfdfdf;
     font-size: 50px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -55,4 +48,36 @@ body {
     display: block;
     width: 150px;
     height: 150px;
+}
+
+
+.head .list {
+    width: 35%;
+    height: 200px;
+    float: left;
+}
+
+.imgcenter .headlist {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 10px;
+    padding: 0;
+    
+    list-style: none;
+    height: 200px;
+}
+
+.imgcenter .headlist li {
+    height: 100px;
+    width: 160px;
+    text-align: center;
+    background-color: black;
+}
+.imgcenter .headlist a {
+    float: left;
+    display: block;
+    font-size: 33px;
+    color: #dfdfdf;
+    text-decoration: none;
+    
 }
