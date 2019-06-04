@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>축제 관련 - Search</title>
     <link href="search.css" type="text/css" rel="stylesheet">
-    
+
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="search.js"></script>
 </head>
+
 <body>
     <div id="div1"></div>
     <section class="title">
-        
+        <form>
+            <div class="option">
+                <select id="searchOption">
+                    <option value="Title" selected>Title</option>
+                    <option value="Country">Country</option>
+                    <option value="Date">Date</option>
+                </select>
+            </div>
+            <div class="search">
+                <input type="search">
+                <button value="Search" onclick="searchList();">
+            </div>
+        </form>
+
     </section>
     <div id="div2"></div>
-    
+
 </body>
+
 </html>

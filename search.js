@@ -6,3 +6,9 @@ window.onload = function() {
         $("#div2").load("./base/foot.html");
     });
 }
+
+
+function searchList(){
+    let option = document.getElementById("#searchOption option:selected")
+    alert(option);
+}
