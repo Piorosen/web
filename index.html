@@ -3,75 +3,21 @@
 <head>
     <meta charset="utf-8">
     <title>이건 도대체 뭐하는 것일까 - index</title>
-    <link href="index.css" type="text/css" rel="stylesheet">
-    <link href="head.css" type="text/css" rel="stylesheet">
-    <link href="foot.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("#div1").load("index.js");
+          });
+        });
+    </script>
 </head>
 <body>
-    <section class="head">
-        <header class="mainlogo">
-            <a href="./index.html" class="imgcenter">
-                <img src="./page/logo.png" alt="logo" />
-            </a>
-        </header>
-        <header class="logotitle">
-            <p>세계 축제 행사~~</p>
-        </header>
-        <header class="list">
-            <nav class="imgcenter">
-                <ul class="headlist">
-                    <a href="./list.html">
-                        <li>
-                            list
-                        </li>
-                    </a>
-                    <a href="./contactus.html">
-                        <li>
-                            contactus
-                        </li>
-                    </a>
-                    <a href="./search.html">
-                        <li>
-                            search
-                        </li>
-                    </a>
-                </ul>
-            </nav>
-        </header>
-    </section>
-
+    <div id="div1">asdftttt</div>
     <section class="title">
 
     </section>
-    <footer class="foot">
-        <nav class="nav"> <!-- 상단에는 이동하는걸 넣을거임 -->
-            <ul>
-                <li>
-                    festival links
-                </li>
-                <a href="./list.html">
-                    <li>festival list</li>
-                </a>
-                <a href="./contactus.html">
-                    <li>contact us</li>
-                </a>
-                <a href="./search.html">
-                    <li>festival search</li>
-                </a>
-            </ul>
-        </nav>
-        <section class="contactus"> <!-- 주소 및 이메일 및 전화번호 -->
-            <div class="info">
-                동의대학교 과제물. 열심히 노력은 했지만은 아무것도 모릅니다.. 하핳 노력만은 열심히 하고 있습니다. 웹은 너무 어렵습니다. 그래서 저는 아무것도 몰라요. 하와와...
-            </div>
-            <div class="logo" >
-                <img src="./page/logo.png" alt="logo image" />
-            </div>
-        </section>
-        <section> <!-- 뭔가 모를 내용 -->
-            
-        </section>
-    </footer>
+    <button>Get External Content</button>
 </body>
 </html>
