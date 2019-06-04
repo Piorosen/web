@@ -2,7 +2,7 @@
 .foot {
     background-color: #4e4e4e;
     width: 100%;
-    height: 300px;
+    height: 150px;
 }
 
 .foot .nav {
@@ -14,17 +14,36 @@
     list-style: none;
     
     color: #dfdfdf;
-    width: 100%;
-}
-
-.foot .nav a {
+    
     text-decoration: none;
     float: left;
     margin-top: 30px;
     margin-left: 50px;
-    font-size: 21px;
-
+    font-size: 25px;
 }
+
 .foot .contactus {
-    background-color: beige;
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    float: left;
+}
+
+.foot .contactus .info {
+    width: 90%;
+    float: left;
+    text-align: center;
+    color: #dfdfdf;
+    font-size: 16px;
+}
+
+.foot .contactus .logo {
+    width: 10%;
+    float: left;
+    margin-top: -80px;
+}
+
+.logo img {
+    width: 130px;
+    height: 130px;
 }
