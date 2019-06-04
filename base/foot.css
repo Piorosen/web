@@ -25,6 +25,10 @@ body {
     font-size: 25px;
 }
 
+.foot .nav a li:hover { 
+    background-color: #5e5e5e;
+}
+
 .foot .contactus {
     margin-top: 30px;
     width: 100%;
