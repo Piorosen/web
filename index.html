@@ -3,21 +3,19 @@
 <head>
     <meta charset="utf-8">
     <title>이건 도대체 뭐하는 것일까 - index</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
     <script>
         $(document).ready(function(){
-          $("button").click(function(){
-            $("#div1").load("index.js");
-          });
+            $("#div1").load("./base/head.html");
+            $("#div2").load("base/foot.html")
         });
     </script>
 </head>
 <body>
-    <div id="div1">asdftttt</div>
+    <div id="div1"></div>
     <section class="title">
-
     </section>
-    <button>Get External Content</button>
+    <div id="div2"></div>
 </body>
 </html>
