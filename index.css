@@ -9,11 +9,11 @@ body {
     width: 100%;
     
     height: 300px;
-    background: white;
     box-shadow: 50px;
 }
 
 canvas {
     width: 1000px;
+    width: 100%;
     height: 300px;
 }

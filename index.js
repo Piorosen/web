@@ -5,12 +5,11 @@ var tools;
 var x = 0;
 function animate() {
     let size = canvas.width;
-
     tools.clearRect(0,0, canvas.width, canvas.height);
     for (var i = 0; i < imageCount; i++){
-        tools.drawImage(imageList[i], i * 400 - x, 0, 400, 300);
+        tools.drawImage(imageList[i], i * size/4 - x, 0, size/4, 300);
     }
-    if (x < (imageCount * 400 - size - 600)){
+    if (x < (imageCount * size/4 - size)){
         x += 1;
     }else{
         x = 0;
