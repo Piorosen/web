@@ -9,6 +9,7 @@ window.onload = function() {
 
 
 function searchList(){
-    let option = document.getElementById("#searchOption option:selected")
-    alert(option);
+    let option = $("#searchOption").children(":selected").text();
+    let query = $("#query").val();
+    alert(option + " " + query);
 }
