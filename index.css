@@ -17,3 +17,36 @@ canvas {
     width: 100%;
     height: 300px;
 }
+
+.tableView {
+    width: 100%;
+    height: 1200px;
+    text-align: center;
+}
+
+.tableView table {
+    margin: 2%;
+    border-spacing: 30px;
+    border-collapse: separate;
+    padding: 10px;
+    width: 96%;
+    height: 96%;
+}
+
+.tableView .tableBody {
+    width: 50%;
+    box-shadow: 0 5px 50px;
+    background: #4d4d4d;
+}
+
+.tableView .tableBody p {
+    color: #e3e3e3;
+}
+
+.tableView .tableHead {
+    width: 100%;
+    padding: 60px;
+    font-size: 30px;
+    color: rgb(8, 8, 8);
+}
+
