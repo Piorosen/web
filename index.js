@@ -10,7 +10,7 @@ function animate() {
         tools.drawImage(imageList[i], i * size/4 - x, 0, size/4, 300);
     }
     if (x < (imageCount * size/4 - size)){
-        x += 1;
+        x += 0.5;
     }else{
         x = 0;
     }
