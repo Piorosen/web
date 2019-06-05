@@ -3,11 +3,17 @@ var canvas;
 var tools;
 
 var x = 0;
+
+var imageX = 400
+var imageY = 300
+
 function animate() {
     let size = canvas.width;
+
+
     tools.clearRect(0,0, canvas.width, canvas.height);
     for (var i = 0; i < imageCount; i++){
-        tools.drawImage(imageList[i], i * size/4 - x, 0, size/4, 300);
+        tools.drawImage(imageList[i], i * imageX - x, 0, imageX, imageY);
     }
     if (x < (imageCount * size/4 - size)){
         x += 0.5;
@@ -32,7 +38,7 @@ window.onload = function() {
     });
 
     for (var i = 0; i < imageCount; i++){
-        imageList[i] = new Image(400, 300);
+        imageList[i] = new Image(imageX, imageY);
         imageList[i].src = "./main/" + (i + 1) + ".jpg";
     }
     animate();

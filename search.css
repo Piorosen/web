@@ -33,7 +33,9 @@ form {
 
 .search #searchOption {
     width: 120px;
-    height: 100px;
+    height: 80px;
+    background: transparent;
+    border-color: black;
     font-size: 20px;
 }
 
@@ -59,10 +61,12 @@ form {
 
     font-size: 32px;
     vertical-align: middle;
+    border-style: solid;
 }
 
 .search button:hover {
     border-color: blue;
+    cursor: pointer;
 }
 .search button:active {
     border-color: red;
