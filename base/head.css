@@ -30,7 +30,7 @@ body {
 
 .head .logotitle {
     display: table;
-    width: 45%;
+    width: 35%;
     height: 200px;
     float: left;
 }
@@ -39,7 +39,7 @@ body {
     display: table-cell;
     vertical-align: middle;
     color: #dfdfdf;
-    font-size: 50px;
+    font-size: 40px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -52,30 +52,39 @@ body {
 
 
 .head .list {
-    width: 40%;
+    width: 50%;
     height: 200px;
     float: left;
 }
 
-.imgcenter .headlist {
+.headlist {
     display: table-cell;
     vertical-align: middle;
-    
     list-style: none;
+
+    width: 480px;
     height: 200px;
+
+    margin: auto;
+    text-align: center;
+}
+
+.listpos {
+    float: right;
 }
 
 .headlist a:hover {
     background-color: #5e5e5e;
 }
 
-.imgcenter .headlist li {
+.headlist li {
     display: table-cell;
     vertical-align: middle;
     height: 100px;
-    width: 160px;
+    width: 130px;
 }
-.imgcenter .headlist a {
+
+.headlist a {
     float: left;
     margin: 0 15px 0 0;
     display: table;

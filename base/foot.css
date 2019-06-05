@@ -37,7 +37,7 @@ body {
 }
 
 .foot .contactus .info {
-    width: 90%;
+    width: 80%;
     float: left;
     text-align: center;
     color: #dfdfdf;
@@ -45,8 +45,8 @@ body {
 }
 
 .foot .contactus .logo {
-    width: 10%;
-    float: left;
+    width: 150px;
+    float: right;
     margin-top: -80px;
 }
 
