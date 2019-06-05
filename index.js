@@ -10,12 +10,11 @@ var imageY = 300
 function animate() {
     let size = canvas.width;
 
-
     tools.clearRect(0,0, canvas.width, canvas.height);
     for (var i = 0; i < imageCount; i++){
         tools.drawImage(imageList[i], i * imageX - x, 0, imageX, imageY);
     }
-    if (x < (imageCount * size/4 - size)){
+    if (x < (imageCount * size / 4 - size)){
         x += 0.5;
     }else{
         x = 0;
