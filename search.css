@@ -17,7 +17,36 @@ body {
 .search {
     display: table-cell;
     vertical-align: middle;
-    
+}
+.search #searchOption {
+    width: 10%;
+    height: 100px;
+}
+
+.search input {
+    width: 30%;
+    line-height: 100px;
+    height: 100px;
+    background: transparent;
+    border: black;
+    border-width: 5px;
+    font-size: 32px;
+}
+
+.search button {
+    width: 10%;
+    height: 100px;
+    border-radius: 50px;
+    border-width: 3px;
+    border-color: green;
+    font-size: 32px;
+}
+
+.search button:hover {
+    border-color: blue;
+}
+.search button:active {
+    border-color: red;
 }
 
 form {

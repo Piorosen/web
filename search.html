@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>축제 관련 - Search</title>
@@ -14,19 +13,18 @@
     <div id="div1"></div>
     <section class="title">
         <div class="search">
-            <form>
-                <select id="searchOption">
+            <form action="./list.html" method="GET">
+                <select name="type" id="searchOption">
                     <option value="Title" selected>Title</option>
                     <option value="Country">Country</option>
                     <option value="Date">Date</option>
                 </select>
-                <input id="query" type="search">
-                <button value="Search" onclick="searchList();">ss</button>
+                <input name="query" type="search">
+                <button value="Search">Search</button>
             </form>
         </div>
     </section>
     <div id="div2"></div>
-
 </body>
 
 </html>
