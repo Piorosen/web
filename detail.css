@@ -1,0 +1,653 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="축제/행사 안내 페이지">
+  <meta name="keywords" content="축제,행사,축제안내,축제소개,축제일정,행사안내,행사소개,행사일정">
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22847241-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-22847241-3');
+  </script>
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD668BN4zhjNC7sH09mCR4vh-SC3jcpAc"></script>
+  
+  <script src="/js/toastMSG.js?ver=20190515"></script>
+  <link rel="stylesheet" href="/js/toastMSG.css?ver=20190515" />
+  
+  <link rel="stylesheet" href="/1809/css/myWish.css?ver=20190515">
+  <script src="/1809/js/myWish.js?ver=20190515"></script>
+  
+  <title>
+    세미원 연꽃문화제 2019_rtTour 축제/행사 소개
+    
+  </title>
+  <script type="text/javascript">
+    window.onload = function(){
+      
+      setMyWish({
+        tid: 15,
+        cid: 2550263,
+        title: '세미원 연꽃문화제 2019',
+        lat: 37.5409273515,
+        lng: 127.3239403130
+      });
+      
+      pload();
+    }
+
+  	var jdata;
+  	function pload(){
+      
+      finishLoading();
+      
+  	}
+
+    var apMarker=[];
+    var infowin;
+    var apmarkers;
+    function insertAroundPoint2map(){
+      apmarkers = new google.maps.LatLngBounds();
+      infowin = new google.maps.InfoWindow();
+      $("#btnAPinsert").hide();
+      if ($("#gmapDiv") != null){
+        $("html,body").animate({
+          scrollTop: $("#gmapDiv").offset().top-15
+        }, 500, function(){
+          if (itemnode.length > 0){
+            apmarkers.extend({
+              lat:gmap.getCenter().lat(),
+              lng:gmap.getCenter().lng()
+            });
+            for (i=0; i < itemnode.length ; i++){
+              apmarkers.extend({
+                lat:Number(itemnode[i].mapy),
+                lng:Number(itemnode[i].mapx)
+              });
+            }
+            gmap.fitBounds(apmarkers);
+            setTimeout("marking(0)", 500);
+          }
+        });
+      }else{
+
+      }
+    }
+
+    function marking(su) {
+      var iconimg = "http://www.horangi.kr/img/icon/mapmarker/photo.png";
+      var image = {
+        url: iconimg
+      };
+      apMarker[su] = new google.maps.Marker({
+        position: {lat:Number(itemnode[su].mapy), lng:Number(itemnode[su].mapx)},
+        icon: image,
+        optimized: false,
+        map: gmap,
+        animation: google.maps.Animation.DROP
+      });
+
+      google.maps.event.addListener(apMarker[su], 'click', function(){
+        var pnode = itemnode[apMarker.indexOf(this)];
+        infowin.setContent("<a href='/visitkorea_info.asp?cid="+ pnode.contenttypeid +"&cnum="+ pnode.contentid +"' target='_rTiger_pointinfo'>"+ pnode.title +"</a>");
+        infowin.open(gmap, this);
+      });
+
+      su++;
+      if (su < itemnode.length){
+        setTimeout("marking("+ su +")", 200);
+      }
+    }
+
+    function finishLoading() {
+      $("#mainContent").animate({
+        opacity: 1
+      },2000, function(){
+        
+        var gadcode ='<scr'+'ipt async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></scr'+'ipt>'
+          +'<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3680087743211713" data-ad-slot="4207595886" data-ad-format="auto" data-full-width-responsive="true"></ins>'
+          +'<scr'+'ipt>'
+          +'(adsbygoogle = window.adsbygoogle || []).push({});'
+          +'</scr'+'ipt>';
+        $("#gadsenseDiv").append(gadcode);
+        
+        closeLoadingAnim();
+      });
+    }
+
+    function goBack(){
+      if(!opener){
+        location.href='http://www.horangi.kr';
+      }else if(window.name.indexOf('_rTiger') == -1){
+        location.href='http://www.horangi.kr';
+      }else{
+        opener.closePop(window);
+      }
+    }
+
+  	function closePop(n){
+  		n.close();
+  	}
+	</script>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Stylish|Nanum+Gothic" rel="stylesheet">
+  <style type="text/css">
+  	body {
+      font-family: 'Noto Sans KR', 'Nanum Gothic', sans-serif;
+      margin: 0px;
+			width: 100%;
+			height: 100%;
+			padding: 5px 0px 10px 0px;
+    }
+    a {
+      text-decoration: none;
+    }
+    input[type=button], .divBtn {
+      border: 2px solid #ee7109;
+      border-radius: 30px;
+      background: blue;
+      background: linear-gradient(0deg, rgb(10, 10, 151) 0%, rgb(77, 50, 239) 35%, rgb(121, 174, 255) 100%);
+      color: white;
+      font-weight: bold;
+      font-size: large;
+      cursor: pointer;
+      text-align:center;
+      padding: 10px;
+      word-break: break-word;
+    }
+    div{
+      box-sizing: border-box;
+    }
+    .divBtn a{
+      color: white;
+    }
+    .rowLine {
+      height: 1px;
+			background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(255, 255, 255), rgba(0, 0, 0, 0));
+    }
+    .gradOrange {
+      background: linear-gradient(0deg, rgb(189, 89, 0) 0%, rgb(238, 114, 4) 35%, rgb(255, 177, 108) 100%);
+    }
+    .gradBlue {
+      background: linear-gradient(0deg, rgb(169, 206, 244) 0%, rgb(37, 143,255) 35%, rgb(7, 99, 197) 100%);
+    }
+    .areaPoint{
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      padding: 10px;
+      border:2px solid black;
+      border-radius: 50%;
+      background-size: cover;
+      background-color: #ffd65c;
+    }
+    .arPointTb {
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+    .arPointTd {
+      display: table-cell;
+      vertical-align: middle;
+      color: white;
+      font-weight: bold;
+      text-shadow: 1px 1px 1px black;
+      cursor: pointer;
+    }
+
+    #pageDiv {
+      width: 95%;
+			max-width: 1200px;
+			min-width: 350px;
+			margin: auto;
+			border-top: 1px solid white;
+			border-left: 1px solid white;
+			border-right: 2px solid #6c6c7a;
+			border-bottom: 2px solid #6c6c7a;
+			background-color: white;
+			box-sizing: border-box;
+			border-radius: 5px;
+			overflow: hidden;
+    }
+    #main > div{
+      width:90%;
+      margin:auto;
+      padding:10px 0px;
+    }
+    #imgDiv img {
+      border: 2px solid #691c00;
+      box-sizing: border-box;
+    }
+    #festTitle{
+      font-family: 'Stylish', 'Nanum Gothic', sans-serif;
+      font-size: 45px;
+      line-height: 1em;
+      display:table-cell;
+      text-align:center;
+      vertical-align:middle;
+      padding:10px;
+      color:white;
+    }
+  </style>
+</head>
+<body style="background-color:#808080">
+  <div id="pageDiv">
+    <div id="header" style="width:100%; height:105px; background-color: #330000; display:table;">
+      <div id="festTitle">
+        세미원 연꽃문화제 2019
+      </div>
+    </div>
+    <div class="rowLine"></div>
+    <div style="text-align:right;margin-right: 5px;">자료제공:한국관광공사</div>
+
+    <div id="mainContent" style="opacity:0">
+      <div id="main" style="min-height:300px;">
+        <div id="imgDiv">
+          
+          <img src="http://tong.visitkorea.or.kr/cms/resource/56/2550256_image2_1.jpg" width="100%" />
+          
+        </div>
+        <div style="padding: 50px 0px 10px; ">
+          <div style="position: relative; border:1px solid black; border-radius:0px 0px 15px 15px; padding:20px; box-shadow:5px 5px 5px gray">
+            <div id="btnMyWish"></div>
+            <div style="height:40px; border-bottom:2px solid;font-size: x-large;font-weight: bold;margin-bottom: 20px">
+              소개글
+            </div>
+            <div id="descDiv" style="line-height:1.5em">
+              양평 양수리에 위치한 물과 꽃의 정원에서 여름을 맞아 연꽃문화제를 개최한다.<br />6만2천평 야외정원에 홍련, 백련, 페리기념연꽃이 가득 피어나고 기분 좋은 연향이 가득하다.<br />연꽃 외에도 라이트아트, 흙인형 등 다양한 전시가 펼쳐지고 작가들과 함께 작품 만들기를 체험하는 작가공방체험도 진행된다.<br />연꽃 그리기, 페이스페인팅, 스탬프투어, 인증샷 이벤트, 소원지 쓰기 등 다채로운 행사가 준비되어 있으니 행복한 여름축제를 즐겨보자!
+            </div>
+          </div>
+        </div>
+        <div id="telDiv">
+          
+            <input type='button' style='width:100%; white-space:normal' value='전화(바로걸기) :  031-775-1835' onclick='location.href="tel:031-775-1835"'>
+          
+        </div>
+        <div id="webDiv" style="display:table">
+          
+            <div class='divBtn' style='display:table-cell; vertical-align:middle; height:25px'>홈페이지 : <a href="http://www.semiwon.or.kr" target="_blank" title="새창: 세미원 홈페이지로 이동">http://www.semiwon.or.kr</a></div>
+          
+        </div>
+        <div style="padding:20px 0px 5px; display:table">
+          <div style="display: table-row; height:30px; vertical-align:middle">
+            <div style="display:table-cell; width:70px; border-radius:25px 0px 0px 0px; background-color:black; text-align:center; vertical-align:middle; color:white; font-size:large; font-weight:bold">
+              주소
+            </div>
+            <div id="addrDiv" style="display:table-cell; border:2px solid black; border-bottom: 1px solid black; border-radius: 0px 25px 0px 0px; vertical-align:middle; padding:10px">
+              경기도 양평군 양서면 양수로 93
+            </div>
+          </div>
+        </div>
+        <div id="gmapDiv"></div>
+        
+        <div id="btnDaumRoute" style="border: 1px solid black; margin: 5px auto; border-radius: 0px 0px 25px 25px; text-align: center; cursor:pointer; padding: 3px" class="gradBlue" title="카카오지도로 길찾기" alt="카카오지도로 길찾기">
+          <img src="/img/1809/kakaoMap_direction.png" style="height:40px" />
+        </div>
+        <script type="text/javascript">
+          var gmap;
+          var geoInfo = {
+            lat: 37.5409273515,
+            lng: 127.3239403130
+          };
+          $("#gmapDiv").css({
+            "width": "90%",
+            "height": ($(window).height()-100)+"px",
+            "margin": "auto",
+            "border": "1px solid black"
+          });
+          gmap = new google.maps.Map(document.getElementById('gmapDiv'),{
+            center: {lat: geoInfo.lat, lng: geoInfo.lng},
+            zoom: 16
+          });
+          var psmarker = new google.maps.Marker({
+            map: gmap,
+            position:{
+              lat: geoInfo.lat,
+              lng: geoInfo.lng
+            }
+          });
+          var durl = $("#festTitle").text().replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, "").trim().replace(/ /gi, "_");
+          $("#btnDaumRoute").attr("onclick", "window.open('http://map.daum.net/link/to/"+ durl +","+ geoInfo.lat +","+ geoInfo.lng +"', '_rTiger_blank')");
+        </script>
+        
+        <div id="infoDiv" style="padding: 30px 0px 0px">
+          <div id="workingDiv" style="border:1px solid black; border-radius:0px 10px; padding:10px; box-shadow:5px 5px 5px gray">
+            <ul id="workingInfo">
+              
+                <li><h3>행사기간</h3><p>2019-06-21 ~ 2019-08-18</p></li>
+              
+                <li><h3>장소</h3><p>세미원</p></li>
+              
+                <li><h3>이용요금</h3><p>일반성인 : 5,000원 / 우대 : 3,000원(6세 이상 어린이, 청소년, 만 65세 이상, 장애인4~6급)<br />
+무료 : 5세 이하, 장애인1~3급 본인 및 동반 보호자 1인, 국가유공자 및 배우자, 현역사병, 기초생활수급 1종 대상자(서류지참), 양평군민</p></li>
+              
+                <li><h3>할인정보</h3><p>단체 30~99인 일반 : 4,500원/우대 : 2,500원<br />
+단체 100인 이상 일반 : 3,000원/우대 : 2,000원</p></li>
+              
+                <li><h3>운영시간</h3><p>07:00-22:00</p></li>
+              
+            </ul>
+          </div>
+        </div>
+        
+        <div id="aroundPointDiv" style="padding: 70px 0px 0px; display:none">
+          <div style="border:1px solid black; position:relative">
+            <div style="width: 200px; height: 50px; position: relative; border: 2px solid black; top: -30px; margin: auto; background: white; text-align: center; line-height: 50px; font-size: large; font-weight: bold; box-shadow: 5px 5px 5px grey">
+              주변 관광 정보
+            </div>
+            <div id="btnAPinsert" style="border:2px solid black;width: 100px; position: absolute; right: 5px; margin-top: -22px; text-align: center; padding:5px; border-radius: 0px 15px 15px 0px; color:white; font-weight:bold; cursor:pointer" class="gradOrange" onclick="insertAroundPoint2map()">지도로보기</div>
+            <div>
+              <div id="aroundinfo" style="text-align:center; padding:10px">
+                
+                    <div class='areaPoint' style='background-image:url(/img/1809/cateImg_A0101.jpg)'>
+                      <div class='arPointTb'>
+                        <div class='arPointTd' onclick='window.open("/visitkorea_info.asp?cid=12&cnum=128918", "_rTiger_pointinfo")'>
+                          양평 두물머리
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class='areaPoint' style='background-image:url(/img/1809/cateImg_A0101.jpg)'>
+                      <div class='arPointTb'>
+                        <div class='arPointTd' onclick='window.open("/visitkorea_info.asp?cid=12&cnum=125458", "_rTiger_pointinfo")'>
+                          운길산
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class='areaPoint' style='background-image:url(/img/1809/cateImg_A0101.jpg)'>
+                      <div class='arPointTb'>
+                        <div class='arPointTd' onclick='window.open("/visitkorea_info.asp?cid=12&cnum=407051", "_rTiger_pointinfo")'>
+                          세미원
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class='areaPoint' style='background-image:url(/img/1809/cateImg_A0201.jpg)'>
+                      <div class='arPointTb'>
+                        <div class='arPointTd' onclick='window.open("/visitkorea_info.asp?cid=12&cnum=129516", "_rTiger_pointinfo")'>
+                          수종사
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class='areaPoint' style='background-image:url(/img/1809/cateImg_A0201.jpg)'>
+                      <div class='arPointTb'>
+                        <div class='arPointTd' onclick='window.open("/visitkorea_info.asp?cid=12&cnum=126806", "_rTiger_pointinfo")'>
+                          다산유적지(남양주)
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class='areaPoint' style='background-image:url(/img/1809/cateImg_A0201.jpg)'>
+                      <div class='arPointTb'>
+                        <div class='arPointTd' onclick='window.open("/visitkorea_info.asp?cid=12&cnum=125560", "_rTiger_pointinfo")'>
+                          정약용선생묘
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class='areaPoint' style='background-image:url(/img/1809/cateImg_A0101.jpg)'>
+                      <div class='arPointTb'>
+                        <div class='arPointTd' onclick='window.open("/visitkorea_info.asp?cid=12&cnum=128221", "_rTiger_pointinfo")'>
+                          두물머리 애벌레 생태학교
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class='areaPoint' style='background-image:url(/img/1809/cateImg_A0203.jpg)'>
+                      <div class='arPointTb'>
+                        <div class='arPointTd' onclick='window.open("/visitkorea_info.asp?cid=12&cnum=128348", "_rTiger_pointinfo")'>
+                          그린토피아
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class='areaPoint' style='background-image:url(/img/1809/cateImg_A0201.jpg)'>
+                      <div class='arPointTb'>
+                        <div class='arPointTd' onclick='window.open("/visitkorea_info.asp?cid=12&cnum=1856950", "_rTiger_pointinfo")'>
+                          경기 남양주 조안 [슬로시티]
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class='areaPoint' style='background-image:url(/img/1809/cateImg_A0202.jpg)'>
+                      <div class='arPointTb'>
+                        <div class='arPointTd' onclick='window.open("/visitkorea_info.asp?cid=12&cnum=2500687", "_rTiger_pointinfo")'>
+                          다산생태공원
+                        </div>
+                      </div>
+                    </div>
+                    
+                  <script>
+                    var itemnode = [{mapy: 37.5335919740, mapx: 127.3174744450, contenttypeid: 12, contentid: 128918, title: '양평 두물머리'},{mapy: 37.5710734599, mapx: 127.3023747420, contenttypeid: 12, contentid: 125458, title: '운길산'},{mapy: 37.5407412665, mapx: 127.3241902960, contenttypeid: 12, contentid: 407051, title: '세미원'},{mapy: 37.5711345676, mapx: 127.3025719443, contenttypeid: 12, contentid: 129516, title: '수종사'},{mapy: 37.5164880709, mapx: 127.2992321483, contenttypeid: 12, contentid: 126806, title: '다산유적지(남양주)'},{mapy: 37.5162492067, mapx: 127.2990766137, contenttypeid: 12, contentid: 125560, title: '정약용선생묘'},{mapy: 37.5361082579, mapx: 127.3125192673, contenttypeid: 12, contentid: 128221, title: '두물머리 애벌레 생태학교'},{mapy: 37.5573172012, mapx: 127.3286171951, contenttypeid: 12, contentid: 128348, title: '그린토피아'},{mapy: 37.5587972883, mapx: 127.3123186352, contenttypeid: 12, contentid: 1856950, title: '경기 남양주 조안 [슬로시티]'},{mapy: 37.5143827430, mapx: 127.2982878499, contenttypeid: 12, contentid: 2500687, title: '다산생태공원'}];
+                    $("#aroundPointDiv").show();
+                  </script>
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+  var rtgall, rtgallTotalpage;
+
+  gmap.addListener("idle", function(){
+    var gBounds = gmap.getBounds();
+    geoInfo.ne = gBounds.getNorthEast();
+    geoInfo.sw = gBounds.getSouthWest();
+    google.maps.event.clearListeners(gmap, 'idle');
+    rtGallView(1);
+  });
+
+  function rtGallView(num) {
+    if ($("#btnRtgallMore")){$("#btnRtgallMore").remove();}
+    $.ajax({
+      url : "/1809/rtGallList.asp?lat="+ geoInfo.lat +"&lng="+ geoInfo.lng +"&n="+ geoInfo.ne.lat() +"&e="+ geoInfo.ne.lng() +"&s="+ geoInfo.sw.lat() +"&w="+ geoInfo.sw.lng() +"&page="+ num,
+      dataType: 'script',
+      success: function(){
+        rtGallViewAdd(num);
+      }
+    });
+  }
+
+  function rtGallViewAdd(num) {
+    if (rtgall != "자료없음"){
+      for (var i=0; i < rtgall.length; i++){
+        $("<div>", {
+          class: "rtpicBox",
+          html: "<img src='/upload/pointimg/"+ rtgall[i].pic +"' onclick='rtPicViewerOpen(this)' />"
+          + "<div class='rtpicCapt'>"+ rtgall[i].title +"<br /><span class='rtpicDate'>"+ rtgall[i].date +"</span></div>"
+        }).appendTo("#rtpicCont");
+      }
+      if (num < rtgallTotalpage){
+        $("<div>", {
+          "onclick": "rtGallView("+ (num+1) +")",
+          "id": "btnRtgallMore",
+          "text": "더보기"
+        }).appendTo("#rtpicCont");
+      }
+      $("#rtpicDiv").show();
+    }
+  }
+
+  var oncealert = false;
+  function rtPicViewerOpen(o) {
+    $("<div>", {
+      "id": "rtPicViewer",
+      "html": $("<div>", {
+        "html": $("<div>", {
+          "id": "rtPicBoard",
+          "onclick": "rtPicViewerClose()",
+          "html": $("<img />", {
+            "src": $(o).attr("src")
+          })
+        })
+      })
+    }).appendTo("body");
+    if (!oncealert){
+      toastMsg("화면을 클릭하면 닫힙니다", 1000);
+      oncealert = true;
+    }
+  }
+  function rtPicViewerClose() {
+    $("#rtPicViewer").remove();
+  }
+</script>
+<link href="https://fonts.googleapis.com/css?family=Romanesco" rel="stylesheet">
+<style type="text/css">
+  #rtpicDiv{
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px black;
+    overflow: hidden;
+  }
+  #rtpicTitle{
+    font-family: 'Romanesco', cursive;
+    padding: 10px;
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 1px 1px 1px black;
+    background: linear-gradient(0deg, #ee7109 0%, gold 75%, yellow 100%);
+    color: white;
+  }
+  #rtpicCont{
+    text-align: center;
+  }
+  .rtpicBox{
+    display: inline-block;
+    width: 95%;
+    max-width: 400px;
+    margin: 10px;
+    border: 1px solid black;
+    position: relative;
+  }
+  .rtpicBox > img{
+    width: 100%;
+  }
+  .rtpicCapt{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    padding: 10px;
+    text-align: right;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    font-size: large;
+    font-weight: bold;
+  }
+  .rtpicDate{
+    font-size: medium;
+    font-weight: normal;
+  }
+  #rtPicViewer{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    overflow: auto;
+  }
+  #rtPicViewer > div{
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  #rtPicBoard{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #btnRtgallMore{
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+<div>
+  <div id="rtpicDiv" style="display:none">
+    <div id="rtpicTitle">
+      romantic Tiger's Gallery
+    </div>
+    <div id="rtpicCont"></div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <div style="height:20px"></div>
+		<div id="gadsenseDiv" style="text-align:center"></div>
+		<div style="height:20px"></div>
+    <div class="rowLine"></div>
+
+    <div id="bottomFooter" style="width:100%; height:140px; display:table">
+  <div style="background-color:rgba(60, 4, 0, 0.48); padding:5px; display:table-cell; text-align:center; vertical-align:middle; font-weight:bold; color:yellow; text-shadow: 0 0 5px #ee7109">
+    낭만호랑이의 여행이야기<br />ⓒ by www.horangi.kr
+  </div>
+</div>
+
+
+  </div>
+  <div id="btnBack" onclick="goBack()" style="position:fixed; width:80px; height:80px; right:5px; bottom:5px; cursor:pointer">
+  <img src="/img/1809/btn_back.png" style="width:100%; height:100%" />
+</div>
+<script type="text/javascript">
+function closeLoadingAnim() {
+  $("#loadingDiv > div > img").css({
+    "transition": "3s",
+    "transform": "scale(5.0)"
+  });
+  $("#loadingDiv").animate({
+    "opacity": 0
+  }, 800, function(){
+    $("#loadingDiv").remove();
+  });
+}
+</script>
+<style type="text/css">
+  #loadingDiv{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: table;
+  }
+  #loadingDiv>div{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+</style>
+<div id="loadingDiv">
+  <div>
+      <img src="/img/1809/loading-icon-4col.gif" width="70" />
+  </div>
+</div>
+
+</body>
+</html>
