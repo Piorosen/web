@@ -10,7 +10,7 @@ namespace webParsing
         {
             core Core = new core();
 
-            Core.Run(2019, 6, 1);
+            Core.Convert();
 
         }
     }

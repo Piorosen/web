@@ -16,5 +16,6 @@ namespace webParsing
 
         public string EventTime = "";
         public string Image = "";
+        public string Country = "";
     }
 }
