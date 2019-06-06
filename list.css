@@ -1,0 +1,57 @@
+
+.pretty {
+    border: solid;
+    border-width: 2px;
+    border-color: black;
+    margin: 50px;
+    box-shadow: 0 5px 50px;
+    background: #4d4d4d;
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+    border-spacing: 30px;
+}
+
+.tableHead tr {
+    color: #e3e3e3;
+    height: 100px;
+    
+    text-align: center;
+
+    font-size: 32px;
+    background: transparent;
+}
+
+.p1 {
+    text-align: center;
+}
+.p2 {
+    margin: 20px;
+    font-size: 16px;
+}
+.p3 {
+    font-size: 20px;
+}
+
+.tableFoot tr td {
+    color: #e3e3e3;
+    height: 200px;
+    text-align: center;
+    font-size: 32px;
+    background: transparent;
+}
+
+.searchRow {
+    height: 200px;
+}
+
+.searchData {
+    width: 20%;
+    border: solid;
+    border-radius: 10;
+    border-width: 5px;
+    border-color: #878787;
+    color: #e3e3e3;
+}

@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>축제 관련 - List</title>
     <link href="list.css" type="text/css" rel="stylesheet">
-    
+
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="list.js"></script>
 </head>
+
 <body>
     <div id="div1"></div>
     <section class="title">
-        <table>
-            <thead>
-                
-            </thead>
-            <tfoot>
-                
-            </tfoot>
-            <tbody>
+        <div class="pretty">
+        <table class="table">
+            <thead class="tableHead">
                 <tr>
-                    <td>
-                        asdasd
+                    <td colspan="5">
+                        목록 및 검색 결과
                     </td>
                 </tr>
+            </thead>
+            <tfoot class="tableFoot">
+                <tr>
+                    <td colspan="5" id="searchTotal">
+                        검색 결과 수 : 
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody class="searchResult" id="result">
+                
             </tbody>
         </table>
+    </div>
     </section>
     <div id="div2"></div>
-    
+
 </body>
+
 </html>
