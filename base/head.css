@@ -22,7 +22,7 @@ body {
 
 .head .mainlogo {
     display: table;
-    width: 15%;
+    width: 150px;
     height: 200px;
     color: #dfdfdf;
     float: left;
@@ -30,7 +30,7 @@ body {
 
 .head .logotitle {
     display: table;
-    width: 35%;
+    width: 350px;
     height: 200px;
     float: left;
 }
@@ -52,9 +52,9 @@ body {
 
 
 .head .list {
-    width: 50%;
+    width: auto;
     height: 200px;
-    float: left;
+    float: right;
 }
 
 .headlist {
@@ -62,7 +62,7 @@ body {
     vertical-align: middle;
     list-style: none;
 
-    width: 480px;
+    width: auto;
     height: 200px;
 
     margin: auto;
@@ -81,12 +81,13 @@ body {
     display: table-cell;
     vertical-align: middle;
     height: 100px;
-    width: 130px;
+    width: 100px;
+
 }
 
 .headlist a {
     float: left;
-    margin: 0 15px 0 0;
+    margin-right: 10px;
     display: table;
     font-size: 33px;
     color: #dfdfdf;

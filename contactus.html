@@ -1,19 +1,96 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>축제 관련 - Contact Us</title>
     <link href="contactus.css" type="text/css" rel="stylesheet">
-    
+
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="contactus.js"></script>
 </head>
+
 <body>
     <div id="div1"></div>
     <section class="title">
-        
+        <div class="tableList">
+            <div class="Desc">
+                프로그램의 문제점, 사이트의 오류 및 광고, 행사 목록 추가할 데이터가 있을 경우 저희에게 직접 연락을 하거나 여기에 있는 사이트를 통하여 전달을 해주세요.
+                전달 하는 방법은 회신 받을 이메일, 진행 되는 국가, 행사와 관련 된 요약, 행사 시작점과 끝나는 시기, 행사와 관련된 홈페이지, 행사를 대표하는 이미지,
+                대략적인 위치와 상세 주소, 관계자 전화번호, 행사 제목을 입력을 하신 뒤 제출을 해 주세요.
+            </div>
+        </div>
+        <div class="formInfo">
+            <table>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">
+                            <p>행사와 관련된 요약</p>
+                            <textarea title="s"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button onclick="submitData()">전송</button>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>관계자 이메일</p>
+                            <input type="text"/>
+                        </td>
+                        <td>
+                            <p>행사 제목</p>
+                            <input type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>행사 시작일 (년도.월.일)</p>
+                            <input type="text"/>
+                        </td>
+                        <td>
+                            <p>행사 종료일 (년도.월.일)</p>
+                            <input type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>진행 되는 국가</p>
+                            <input type="text"/>
+                        </td>
+                        <td>
+                            <p>공식 홈페이지</p>
+                            <input type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>행사를 대표 하는 이미지 링크</p>
+                            <input type="text"/>
+                        </td>
+                        <td>
+                            <p>행사 하는 위치</p>
+                            <input type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>행사 상세 위치</p>
+                            <input type="text"/>
+                        </td>
+                        <td class="textInput">
+                            <p>행사 연락 번호</p>
+                            <input type="text"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
     <div id="div2"></div>
-    
 </body>
+
 </html>

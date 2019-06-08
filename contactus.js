@@ -6,3 +6,7 @@ window.onload = function() {
         $("#div2").load("./base/foot.html");
     });
 }
+
+function submitData(){
+    alert("성공적으로 전달 하였습니다.");
+}

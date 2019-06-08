@@ -27,6 +27,11 @@ var imageCount = 8;
 var imageList = new Array()
 
 
+function moveList(e) {
+    console.log(e);
+    window.location.href = "./list.html?type=Country&query=" + e;
+}
+
 window.onload = function() {
     canvas = document.getElementById("moveimage");
     tools = canvas.getContext("2d");

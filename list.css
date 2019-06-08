@@ -1,3 +1,7 @@
+body {
+    background: #cdcdcd;
+    margin: 0;
+}
 
 .pretty {
     border: solid;
@@ -35,12 +39,15 @@
     font-size: 20px;
 }
 
+.p4 {
+    display: none;
+}
+
 .tableFoot tr td {
     color: #e3e3e3;
     height: 200px;
     text-align: center;
     font-size: 32px;
-    background: transparent;
 }
 
 .searchRow {
@@ -54,4 +61,14 @@
     border-width: 5px;
     border-color: #878787;
     color: #e3e3e3;
+}
+
+.searchData:hover {
+    cursor: pointer;
+    border-color: #d3d3d3;
+}
+
+.searchData:active {
+    cursor: pointer;
+    border-color: #3a3a3a;
 }

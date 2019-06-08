@@ -38,6 +38,18 @@ canvas {
     background: #4d4d4d;
 }
 
+.tableView .tableBody:hover {
+    cursor: pointer;
+    background: #3b3b3b;
+}
+
+.tableView .tableBody:active {
+    cursor: pointer;
+    background: #808080;
+}
+
+
+
 .tableView .tableBody p {
     color: #e3e3e3;
     font-size: 50px;
@@ -49,4 +61,3 @@ canvas {
     font-size: 30px;
     color: #080808;
 }
-

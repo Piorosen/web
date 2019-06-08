@@ -45,29 +45,60 @@ window.onload = function() {
 
     findEvent();
     printResult();
-
 }
 
 function printResult(){
     var sss = document.getElementById("result");
-
     let size = 5;
+
+    document.getElementById("searchTotal").innerText += " " + searchResult.length + " 개 탐색 됨";
 
     for (let row = 0; row < maxShow / size; row++){
         var data = "<tr class=\"searchRow\">\n";
         for (let col = 0; col < size; col++){
-            data += "<td class=\"searchData\">\n";
+            data += "<td class=\"searchData\" >\n";
             data += "<p class=\"p1\">" + searchResult[row * size + col].Title + "</p>"
-            data += "<p class=\"p2\">" + searchResult[row * size + col].StartDay + "~" + searchResult[row * size + col].EndDay + "</p>"
+            data += "<p class=\"p2\">" + searchResult[row * size + col].StartDay + " ~ " + searchResult[row * size + col].EndDay + "</p>"
             data += "<p class=\"p3\">" + searchResult[row * size + col].Country + "</p>"
+            data += "<p class=\"p4\">" + searchResult[row * size + col].id + "</p>"
             data += "</td>\n";
         }
         data += "</tr>\n";
         sss.innerHTML += data;
     }
 
-    document.getElementById("searchTotal").innerText += " " + searchResult.length + " 개 탐색 됨";
+    for (let loop = 1; loop <= 4; loop++){
+        let p = document.getElementsByClassName("p" + loop);
+        for (let i = 0; i < p.length; i++){
+            p[i].addEventListener('click', handler, false)
+        }
+    }
+        
+    p = document.getElementsByClassName("searchData");
+    for (let i = 0; i < p.length; i++){
+        p[i].addEventListener('click', stop, false)
+    }
 }
+
+function handler(event){}
+
+function stop(event){
+    gotoDetail(event)
+    event.stopPropagation();
+}
+
+function gotoDetail(event){
+    let id = 0;
+
+    if (event.path.length == 11){
+        id = event.path[1].lastChild.innerText;
+    }else{
+        id = event.path[0].lastChild.innerText;
+    }
+
+    document.location.href = "./detail.html?id=" + id;
+}
+
 
 function findEvent() {
     var index = 0;
@@ -90,6 +121,5 @@ function findEvent() {
         }
 
         searchResult[index++] = file[i];
-
     }
 }
